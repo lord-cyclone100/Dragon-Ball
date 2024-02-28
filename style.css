@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Shojumaru&display=swap');
 
 html{
-   overflow-x: hidden; 
+   overflow-y: hidden; 
 }
 
 body{
@@ -34,10 +34,12 @@ body{
     margin: 0;
     padding: 0;
     font-size: 1.2rem;
+    color: #041b58;
 }
 
 .nav-items > li{
     list-style: none;
+    cursor: pointer;
 }
 
 .ham-menu > img{
@@ -78,6 +80,7 @@ nav{
     }
     .kid{
         display: block;
+        cursor: initial;
     }
     .navbar{
         /* display: none; */
@@ -88,23 +91,25 @@ nav{
         top: 0px;
         width: 100vw;
         height: 100vh;
-        /* background-image: url('./hamvegeta.png');
+        background-image: url('./hamvegeta.png');
         background-size: cover;
         background-position: center;
-        background-repeat: no-repeat; */
-        background: aquamarine;
-        transform: translateX(100%);
+        background-repeat: no-repeat;
+        /* background: aquamarine; */
+        transform: translateY(-100%);
         transition: all 0.5s linear;
         opacity: 0;
         visibility: hidden;
+        
     }
     .nav-items{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        color: aliceblue;
     }
     .active .navbar{
-        transform: translateX(0);
+        transform: translateY(0);
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
@@ -112,6 +117,7 @@ nav{
     }
     .active .ham-menu .nav-icon[name="close-ham"]{
         display: block;
+        filter: invert(100%);
     }
     .active .ham-menu .nav-icon[name="open-ham"]{
         display: none;
